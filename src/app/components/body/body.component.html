@@ -1,0 +1,35 @@
+<div class="row">
+
+    <div class="col">
+        <h1>*ngIf</h1>
+
+
+        <div class="card mb-3" style="max-width: 540px;" *ngIf="frase.mostrar">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="..." class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{frase.autor}}</h5>
+                        <p class="card-text">{{frase.mensaje}}</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary" (click)="frase.mostrar=!frase.mostrar">Mostrar/Ocultar</button>
+
+
+    </div>
+    <div class="col">
+
+        <h1>*ngfor</h1>
+        <ul class="list-group">
+            <li *ngFor="let personaje of personajes; let i = index" class="list-group-item">{{i+1}}. {{personaje}}</li>
+
+        </ul>
+
+    </div>
+</div>
